@@ -905,4 +905,19 @@ def set_device_temp_records():
 
     return jsonify({'status': 'OK'})
 
+
+# Get passer image
+
+@app.route('{}get-device-passer-image'.format(API), methods=['POST'])
+@auth.login_required
+
+def set_device_passer_image():
+
+    request_passer_image = request.get_json()
+
+    pic_id = request_passer_image['pic_id']
+    pic_index = request_passer_image['pic_index']
+
+    return jsonify({'status': 'OK'})
+
 app.run()
